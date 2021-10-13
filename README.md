@@ -1,4 +1,4 @@
-This is modified [beamerposter](https://ctan.org/pkg/beamerposter?lang=en) template with University of Queensland logo and colors. It is forked from https://rev.cs.uchicago.edu/k4rtik/gemini-uccs (which is forked from https://github.com/anishathalye/gemini). 
+This is a modified [beamerposter](https://ctan.org/pkg/beamerposter?lang=en) template with the University of Queensland logo and colors. It is forked from https://rev.cs.uchicago.edu/k4rtik/gemini-uccs (which is forked from https://github.com/anishathalye/gemini). 
 
 ## Screenshot
 
