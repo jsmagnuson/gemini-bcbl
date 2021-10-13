@@ -14,4 +14,14 @@ UQ RGB is in file `beamercolorthemeuchicago.sty` can be re-adjusted. The current
 
 ## Compiling
 
-Refer to [Gemini Readme File](https://github.com/alfurka/gemini-uq/blob/master/gemini-readme.md) for more details.
+### Using it From Overleaf
+
+You can easly use the template via [Overleaf Gallery](https://www.overleaf.com/latex/templates/uq-beamerposter-template/svbpbndqdpqv). Click "Open as Template" after going to the gallery page. 
+
+### Offline Use
+
+It is a gemini template. More information about dependencies are available here: [Gemini Readme File](https://github.com/alfurka/gemini-uq/blob/master/gemini-readme.md).
+
+1. Copy the files in this repository (or clone the repository)
+2. In `main.tex`, set up your paper size, column layout, and scale the content if required.
+3. Run `makefile` to build your poster
