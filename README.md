@@ -25,3 +25,5 @@ It is a gemini template. More information about dependencies are available here:
 1. Copy the files in this repository (or clone the repository)
 2. In `main.tex`, set up your paper size, column layout, and scale the content if required.
 3. Run `makefile` to build your poster
+
+**Note:** *This is not an official UQ template.* 
