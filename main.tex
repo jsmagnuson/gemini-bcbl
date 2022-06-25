@@ -1,10 +1,10 @@
-% UQ Gemini theme
-% See: https://github.com/alfurka/gemini-uq
-% Forked from
-% https://rev.cs.uchicago.edu/k4rtik/gemini-uccs
-% which is forked from
-% https://github.com/anishathalye/gemini
-
+% BCBL Gemini theme
+% Forked from 
+%     https://github.com/alfurka/gemini-uq
+% Which was forked from
+%     https://rev.cs.uchicago.edu/k4rtik/gemini-uccs
+% Which was forked from
+%     https://github.com/anishathalye/gemini
 
 \documentclass[final]{beamer}
 
@@ -16,12 +16,26 @@
 \usepackage{lmodern}
 \usepackage[size=custom,width=100,height=75,scale=1.0]{beamerposter}
 \usetheme{gemini}
-\usecolortheme{uchicago}
+\usecolortheme{bcbl}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tikz}
+\usepackage{outlines}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.17}
+
+\usepackage[labelfont=if,
+   justification=justified,
+   format=plain]{caption}
+
+\usepackage{tipa}
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+
+\usepackage[natbibapa]{apacite}
+\usepackage{subfig}
+\usepackage{xcolor}
+\usepackage[none]{hyphenat} % turn off hyphens
 
 % ====================
 % Lengths
@@ -42,18 +56,18 @@
 
 \title{Some fancy title: followed by some more text}
 
-\author{Ali F. Kalay \inst{1} \and Other 1 \inst{2} \and Other 2 \inst{2}}
+\author{James S. Magnuson \inst{1,2} \and Other 1 \inst{1} \and Other 2 \inst{1,2}}
 
-\institute[shortinst]{\inst{1} Some Institute \samelineand \inst{2} Another Institute}
+\institute[shortinst]{\inst{1} BCBL. Basque Center on Cognition, Brain \& Language \samelineand \inst{2} Ikerbasque. Basque Foundation for Science}
 
 % ====================
 % Footer (optional)
 % ====================
 
 \footercontent{
-  \href{https://www.example.com}{https://www.example.com} \hfill
+  \href{https://bcbl.eu}{https://bcbl.eu} \hfill
   ABC Conference 2025, New York --- XYZ-1234 \hfill
-  \href{mailto:a.kalay@example.com}{a.k@example.com}}
+  \href{mailto:f.last@bcbl.eu}{f.last@bcbl.eu}}
 % (can be left out to remove footer)
 
 % ====================
@@ -72,10 +86,10 @@
 \addtobeamertemplate{headline}{}
 {
     \begin{tikzpicture}[remember picture,overlay]
-      \node [anchor=north west, inner sep=3cm] at ([xshift=0.0cm,yshift=1.0cm]current page.north west)
-      {\includegraphics[height=5.0cm]{logos/Logo-Left.png}}; % also try shield-white.eps
-      \node [anchor=north east, inner sep=3cm] at ([xshift=0.0cm,yshift=2.5cm]current page.north east)
-      {\includegraphics[height=8.0cm]{logos/Logo-Right.png}};
+      \node [anchor=north west, inner sep=3cm] at ([xshift=0.0cm,yshift=2.8cm]current page.north west)
+      {\includegraphics[height=8.0cm]{logos/bcbl-word-mark.pdf}}; % also try shield-white.eps
+      \node [anchor=north east, inner sep=3cm] at ([xshift=0.0cm,yshift=4cm]current page.north east)
+      {\includegraphics[height=9.0cm]{logos/bcbl-logo-white-on-blue.jpg}};
     \end{tikzpicture}
 }
 
@@ -124,22 +138,21 @@
 
   \begin{alertblock}{A highlighted block}
 
-    This block catches your eye, so \textbf{important stuff} should probably go
+    An \textbf{alert block} catches your eye, so \textbf{important stuff} should probably go
     here.
 
-    Curabitur eu libero vehicula, cursus est fringilla, luctus est. Morbi
-    consectetur mauris quam, at finibus elit auctor ac. Aliquam erat volutpat.
-    Aenean at nisl ut ex ullamcorper eleifend et eu augue. Aenean quis velit
-    tristique odio convallis ultrices a ac odio.
 
     \begin{itemize}
-      \item \textbf{Fusce dapibus tellus} vel tellus semper finibus. In
-        consequat, nibh sed mattis luctus, augue diam fermentum lectus.
-      \item \textbf{In euismod erat metus} non ex. Vestibulum luctus augue in
-        mi condimentum, at sollicitudin lorem viverra.
-      \item \textbf{Suspendisse vulputate} mauris vel placerat consectetur.
-        Mauris semper, purus ac hendrerit molestie, elit mi dignissim odio, in
-        suscipit felis sapien vel ex.
+      \item \textbf{References.} Note that the default mode is to only include in the reference list sources that are 
+    actually cited \citep[e.g.,][]{shannon1948communication}. To include everything in your
+    bibliography, whether cited or not, uncomment the \texttt{nocite} line in \texttt{main.tex}.
+      \item \textbf{Logos.} Search the code in \texttt{main.tex} for \texttt{headline}, which is where
+      you will find the logo insertions. Upload the logo you need into the logos folder and adjust accordingly.
+      \item \textbf{Use at your own risk.} I haven't done a full evaluation of how this works 
+      from the command line on mac, windows, or linux. I'm using it within Overleaf. 
+      \item \textbf{Want to help make this better?} If you want to test this from the command line, 
+      or help me make the github repo more robust, or figure out how to make this available as an 
+      Overleaf template, let me know!
     \end{itemize}
 
     Aenean tincidunt risus eros, at gravida lorem sagittis vel. Vestibulum ante
@@ -311,10 +324,17 @@
 
   \end{block}
 
-  \begin{block}{References}
 
-    \nocite{*}
-    \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
+  \begin{block}{References}
+%    \setlength{\bibleftmargin}{.2in}
+%    \setlength{\bibindent}{-\bibleftmargin}
+    \setlength{\bibhang}{12pt}
+    % \nocite{*}
+    %\renewcommand{\footnotesize}{\fontsize{6pt}{7pt}\selectfont}
+    \def\bibfont{\footnotesize}
+   % \footnotesize{
+    \bibliographystyle{apacite}\bibliography{poster}
+    %}
 
   \end{block}
 

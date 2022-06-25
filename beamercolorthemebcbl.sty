@@ -22,6 +22,13 @@
 \definecolor{blue}{RGB}{21, 95, 131}
 \definecolor{violet}{RGB}{53, 14, 32}
 
+% BCBL COLORS
+\definecolor{bcbl-cyan}{RGB}{0, 159, 218}
+\definecolor{bcbl-darkblue}{RGB}{0, 60, 105}
+\definecolor{bcbl-lightgrey}{RGB}{195, 200, 200}
+\definecolor{bcbl-darkgrey}{RGB}{108, 111, 112}
+\definecolor{pale-yellow}{RGB}{255, 255, 235}
+
 % ====================
 % Theme
 % ====================
@@ -31,21 +38,21 @@
 \setbeamercolor{palette secondary}{fg=black,bg=white}
 \setbeamercolor{palette tertiary}{bg=black,fg=white}
 \setbeamercolor{palette quaternary}{fg=black,bg=white}
-\setbeamercolor{structure}{fg=violet}
+\setbeamercolor{structure}{fg=bcbl-cyan}
 
 % Headline
-\setbeamercolor{headline}{fg=white,bg=UQmain}
-\setbeamercolor{headline rule}{bg=UQmain}
+\setbeamercolor{headline}{fg=white,bg=bcbl-cyan}
+\setbeamercolor{headline rule}{bg=bcbl-darkblue}
 
 % Block
-\setbeamercolor{block title}{fg=UQmain,bg=white}
+\setbeamercolor{block title}{fg=bcbl-darkblue,bg=white}
 \setbeamercolor{block separator}{bg=black}
 \setbeamercolor{block body}{fg=black,bg=white}
 
-% Alert Block
-\setbeamercolor{block alerted title}{fg=UQmain,bg=lightgray}
+% Alert Block  -- change pale-yellow to bcbl-lightgrey to be more standard-compliant?
+\setbeamercolor{block alerted title}{fg=bcbl-darkblue,bg=pale-yellow}
 \setbeamercolor{block alerted separator}{bg=black}
-\setbeamercolor{block alerted body}{fg=black,bg=lightgray}
+\setbeamercolor{block alerted body}{fg=black,bg=pale-yellow}
 
 % Heading
 \setbeamercolor{heading}{fg=black}
